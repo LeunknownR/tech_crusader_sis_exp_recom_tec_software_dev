@@ -1,0 +1,305 @@
+/* HEADER */
+header {
+    background-color: #161a1d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo-container {
+    display: flex;
+    user-select: none;
+    gap: 10px;
+}
+#logo-icon {
+    color: var(--color-2);
+    font-size: 37px;
+}
+#team-icon {
+    display: flex;
+    align-items: center;
+    color: var(--color-7);
+    background-color: var(--color-5);
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 8px;
+}
+/* Lista de miembros */
+#members-list {
+    display: flex;
+    flex-direction: column;
+    background-color: #00000099;
+    width: 360px;
+    padding: 30px 40px;
+    gap: 20px;
+    border-radius: 15px;
+    position: absolute;
+    right: 225px;
+    top: 70px;
+    height: 1.5%;
+    z-index: 50;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+}
+#members-list h5 {
+    font-weight: 700;
+}
+#members-list.active {
+    visibility: visible;
+    opacity: 1;
+    height: 510px;
+}
+#members-list .cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+}
+#members-list .cards-container .member-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-5);
+    border-radius: 35px;
+    padding: 10px 10px;
+    width: 88%;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    transform: translateX(-300px);
+}
+#members-list .cards-container .member-card span {
+    color: #7E7E7E;
+    font-size: 18px;
+    width: 55%;
+}
+#members-list .cards-container .member-card iconify-icon {
+    font-size: 28px;
+    color: #646464;
+}
+#members-list .cards-container .member-card::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 200px;
+    height: 100%;
+    background: #742aff;
+    opacity: 0.15;
+    -webkit-transform: skew(-30deg);
+    transform: skew(-30deg);
+    z-index: 1;
+}
+#members-list .cards-container .member-card.active {
+    transform: translateX(0px);
+    opacity: 1;
+}
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+}
+#questionary-title {
+    padding: 0 180px 60px 180px;
+}
+#questionary-title h1 {
+    font-size: 40px;
+}
+#questionary-title p {
+    font-size: 20px;
+    color: var(--color-8);
+}
+section {
+    display: flex;
+    align-items: center;
+    gap: 260px;
+    padding: 0px 200px;
+}
+section img {
+    max-width: 450px;
+    min-width: 250px;
+}
+#questionary {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 55vh;
+    overflow-y: scroll;
+    min-width: 60%;
+}
+#questionary::-webkit-scrollbar {
+    width: 12px;
+}
+#questionary::-webkit-scrollbar-thumb {
+    background-color: var(--color-1);
+    border-radius: 5px;
+}
+#questionary .question {
+    border: 1px solid #cacaca;
+    border-radius: 30px;
+    padding: 50px 100px;
+    margin-right: 40px;
+}
+#questionary .question h2 {
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+.alternatives-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.alternative {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    padding-right: 40px;
+    user-select: none;
+}
+/* Radio button 💩💩💩*/
+.alternative input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.alternative .checkmark {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 3px solid var(--color-3);
+    transition: 0.2s;
+}
+.alternative:hover input ~ .checkmark {
+    background-color: #e3d0f6;
+}
+.alternative input:checked ~ .checkmark {
+    background-color: var(--color-3);
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.alternative input:checked ~ .checkmark:after {
+    display: block;
+}
+.alternative .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: white;
+}
+/*FOOTER*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #d1d1d1;
+    background-color: var(--color-6);
+}
+
+/* Media queries*/
+@media (max-width: 1899px) {
+    footer h3 {
+        font-size: 15px;
+    }
+}
+@media (max-width: 1500px) {
+    #members-list {
+        top: 0px;
+        right: 205px;
+        transform: scale(0.8);
+    }
+}
+@media (max-width: 1280px) {
+    #questionary-title {
+        padding: 0px 160px 20px 160px;
+    }
+    #questionary-title h1 {
+        font-size: 30px;
+    }
+    #questionary-title p {
+        font-size: 14px;
+        color: var(--color-8);
+    }
+    section {
+        gap: 100px;
+        padding: 0px 70px;
+        justify-content: center;
+    }
+    section img {
+        width: 250px;
+    }
+    #questionary .question {
+        padding: 50px 40px;
+    }
+    #questionary .question h2 {
+        font-size: 20px;
+    }
+    #questionary .question label {
+        font-size: 13px;
+    }
+    .alternative .checkmark {
+        height: 14px;
+        width: 14px;
+    }
+    .alternative .checkmark:after {
+        top: 2.4px;
+        left: 2px;
+        width: 9.5px;
+        height: 9.5px;
+        border-radius: 50%;
+        background: white;
+    }
+    footer h3 {
+        font-size: 12px !important;
+    }
+}
+@media (max-width: 1200px) {
+    section img {
+        display: none;
+    }
+}
+@media (max-width: 1100px) {
+    header {
+        padding: 20px 130px;
+    }
+}
+@media (max-width: 800px) {
+    header {
+        padding: 20px 40px;
+    }
+    #questionary-title {
+        padding: 0 60px;
+    }
+}
+@media (max-width: 750px) {
+    section {
+        padding: 0 20px;
+    }
+}
+@media (max-width: 550px) {
+    #questionary-title {
+        padding: 30px 30px;
+    }
+}
+@media (max-height: 650px) {
+    #members-list .cards-container .member-card {
+        padding: 8px 5px;
+    }
+    #members-list .cards-container .member-card span {
+        font-size: 16px;
+    }
+}
