@@ -190,7 +190,7 @@ main {
     }
 }
 #intro {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: #00000066;
@@ -213,7 +213,6 @@ main {
 #intro.active img {
     transform: translateX(0);
 }
-
 
 @media (max-width: 600px) {
     #questionary-wrapper {
