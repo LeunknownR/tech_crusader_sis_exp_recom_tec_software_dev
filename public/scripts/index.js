@@ -1,4 +1,3 @@
-import { memberAnimationEnter, memberAnimationLeave } from "./members-animation.js";
+import { initUI } from "./ui/main.js";
 
-memberAnimationEnter();
-memberAnimationLeave();
+initUI();

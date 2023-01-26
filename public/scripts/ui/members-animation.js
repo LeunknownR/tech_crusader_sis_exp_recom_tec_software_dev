@@ -2,7 +2,7 @@ const teamIcon = document.querySelector("#team-icon");
 const membersList = document.querySelector("#members-list");
 const memberCard = document.querySelectorAll(".member-card");
 
-export function memberAnimationEnter() {
+const memberAnimationEnter = () => {
     teamIcon.addEventListener("mouseenter", () => {
         membersList.classList.toggle("active");
         memberCard.forEach((e) => {
@@ -10,11 +10,15 @@ export function memberAnimationEnter() {
         });
     });
 }
-export function memberAnimationLeave() {
+const memberAnimationLeave = () => {
     teamIcon.addEventListener("mouseleave", () => {
         membersList.classList.toggle("active");
         memberCard.forEach((e) => {
             e.classList.toggle("active");
         });
     });
+}
+export const initMembers = () => {
+    memberAnimationEnter();
+    memberAnimationLeave();
 }

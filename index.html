@@ -85,103 +85,52 @@
             </section>
         </header>
         <main>
-            <div id="questionary-title">
-                <h1>CUESTIONARIO</h1>
-                <p>
-                    Responde las siguientes preguntas para darte una
-                    recomendación de tecnologías acorde a tus necesidades :).
-                </p>
-            </div>
-            <section>
-                <article id="questionary">
-                    <div class="question">
-                        <h2>¿Qué haces con el pastel?</h2>
-                        <form action="" class="alternatives-container">
-                            <label for="alt1" class="alternative">
-                                Sentarme
-                                <input type="radio" name="alt" id="alt1" />
-                                <span class="checkmark"></span>
-                            </label>
-                            <label for="alt2" class="alternative">
-                                Sentarme
-                                <input type="radio" name="alt" id="alt2" />
-                                <span class="checkmark"></span>
-                            </label>
-                            <label for="alt3" class="alternative">
-                                Sentarme
-                                <input type="radio" name="alt" id="alt3" />
-                                <span class="checkmark"></span>
-                            </label>
-                        </form>
+            <section id="questionary-wrapper" class="view active">
+                <section id="questionary">
+                    <div class="title">
+                        <h1>CUESTIONARIO</h1>
+                        <p>
+                            Responde las siguientes preguntas para darte una
+                            recomendación de tecnologías acorde a tus necesidades :).
+                        </p>
                     </div>
-                    <div class="question">
-                        <h2>¿Qué haces con el pastel?</h2>
-                        <form action="" class="alternatives-container">
-                            <label for="alt4" class="alternative">
-                                Sentarme
-                                <input type="radio" name="alt" id="alt4" />
-                                <span class="checkmark"></span>
-                            </label>
-                            <label for="alt5" class="alternative">
-                                Comerlo
-                                <input type="radio" name="alt" id="alt5" />
-                                <span class="checkmark"></span>
-                            </label>
-                            <label for="alt6" class="alternative">
-                                gaaaaaaaaaaaaa
-                                <input type="radio" name="alt" id="alt6" />
-                                <span class="checkmark"></span>
-                            </label>
-                        </form>
+                    <form action="">
+                        <section class="content">
+                        </section>
+                        <footer>
+                            <button id="btn-process" class="custom-btn primary">
+                                <span>Procesar</span>
+                                <iconify-icon icon="fluent-mdl2:processing"></iconify-icon>
+                            </button>
+                            <button id="btn-clear" class="custom-btn secondary">
+                                <span>Limpiar</span>
+                                <iconify-icon icon="clarity:trash-solid"></iconify-icon>
+                            </button>
+                        </footer>
+                    </form>
+                </section>
+                <img id="jotaro-hat" src="./public/img/jotaro-hat.png" alt="Jotaro Hat" />
+            </section>
+            <section id="recommendation" class="view">
+                <article class="content">
+                    <div id="recommendation-header" class="title">
+                        <h1>RECOMENDACIONES</h1>
+                        <button id="btn-back-to-form" class="custom-btn">Volver</button>
                     </div>
-                    <div class="question">
-                        <h2>¿Qué haces con el pastel?</h2>
-                        <form action="" class="alternatives-container">
-                            <label for="alt7" class="alternative">
-                                Sentarme
-                                <input type="radio" name="alt" id="alt7" />
-                                <span class="checkmark"></span>
-                            </label>
-                            <label for="alt8" class="alternative">
-                                Comerlo
-                                <input type="radio" name="alt" id="alt8" />
-                                <span class="checkmark"></span>
-                            </label>
-                            <label for="alt9" class="alternative">
-                                gaaaaaaaaaaaaa
-                                <input type="radio" name="alt" id="alt9" />
-                                <span class="checkmark"></span>
-                            </label>
-                        </form>
-                    </div>
-                    <div class="question">
-                        <h2>¿Qué haces con el pastel?</h2>
-                        <form action="" class="alternatives-container">
-                            <label for="alt10" class="alternative">
-                                Sentarme
-                                <input type="radio" name="alt" id="alt10" />
-                                <span class="checkmark"></span>
-                            </label>
-                            <label for="alt11" class="alternative">
-                                Comerlo
-                                <input type="radio" name="alt" id="alt11" />
-                                <span class="checkmark"></span>
-                            </label>
-                            <label for="alt12" class="alternative">
-                                gaaaaaaaaaaaaa
-                                <input type="radio" name="alt" id="alt12" />
-                                <span class="checkmark"></span>
-                            </label>
-                        </form>
-                    </div>
+                    <ul>
+                        <li>ReactJS</li>
+                        <li>ASP .net C#</li>
+                    </ul>
                 </article>
-                <img src="./public/img/jotaro-hat.png" alt="Jotaro Hat" />
             </section>
         </main>
-        <footer class="standard-padd">
+        <footer id="footer-main" class="standard-padd">
             <h3 class="custom-subtitle-1">COPYRIGHT © 2023</h3>
             <h3 class="custom-subtitle-1">POWERED BY GROUP 2</h3>
         </footer>
+        <div id="intro">
+            <img src="./public/img/intro.png"/>
+        </div>
         <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
         <!-- <img src="public/img/jotaro.png" alt="Jotaro"/> -->
         <script type="module" src="./public/scripts/index.js"></script>
