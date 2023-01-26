@@ -1,0 +1,222 @@
+/* HEADER */
+header {
+    background-color: #161a1d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo-container {
+    display: flex;
+    user-select: none;
+    gap: 10px;
+}
+#logo-icon {
+    color: var(--color-2);
+    font-size: 37px;
+}
+#team-icon {
+    display: flex;
+    align-items: center;
+    color: var(--color-7);
+    background-color: var(--color-5);
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.view {
+    display: none;
+}
+#questionary-wrapper {
+    width: 90%;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.title h1 {
+    font-size: 40px;
+}
+.title p {
+    font-size: 20px;
+    color: var(--color-8);
+}
+#questionary {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#questionary form > footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+#questionary form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#questionary .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 55vh;
+    overflow-y: scroll;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+#questionary .content::-webkit-scrollbar {
+    width: 10px;
+}
+#questionary .content::-webkit-scrollbar-thumb {
+    background-color: var(--color-1);
+    border-radius: 5px;
+}
+#questionary .question {
+    border: 1px solid #cacaca;
+    border-radius: 30px;
+    padding: 40px;
+    width: 100%;
+}
+#questionary .question h2 {
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+.alternatives-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.alternative {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    padding-right: 40px;
+    user-select: none;
+}
+/* Radio button 💩💩💩*/
+.alternative input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.alternative .checkmark {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 2px solid var(--color-3);
+    transition: 0.2s;
+}
+.alternative:hover input ~ .checkmark {
+    background-color: #e3d0f6;
+}
+.alternative input:checked ~ .checkmark {
+    background-color: var(--color-3);
+}
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: white;
+}
+.alternative input:checked ~ .checkmark::after {
+    display: block;
+}
+.alternative .checkmark:after {
+    width: 14px;
+    height: 14px;
+}
+#jotaro-hat {
+    width: 80%;
+    max-width: 420px;
+}
+#recommendation {
+    width: 60%;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#recommendation .content {
+    width: 100%;
+}
+#recommendation li {
+    font-size: 22px;
+    line-height: 40px;
+}
+#recommendation-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#btn-back-to-form {
+    color: var(--color-3);
+    font-size: 25px;
+}
+/* Footer principal */
+#footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #d1d1d1;
+    background-color: var(--color-6);
+}
+.view.active {
+    display: flex;
+}
+@keyframes anim-intro {
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+#intro {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000066;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+#intro.active {
+    visibility: visible;
+    opacity: 1;
+}
+#intro img {
+    width: 180vh;
+    transition: 0.5s;
+    transform: translateX(-180vw);
+}
+#intro.active img {
+    transform: translateX(0);
+}
+
+
+@media (max-width: 600px) {
+    #questionary-wrapper {
+        width: 80%;
+    }
+}

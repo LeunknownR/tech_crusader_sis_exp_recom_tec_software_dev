@@ -16,13 +16,19 @@ export const ALTERNATIVES = {
         SMALL: "large-wingspan-small",
         BIG: "large-wingspan-big"
     },
-    DB_MANAGEMENT: {
+    DATABASE_MANAGEMENT: {
         AUTOMATIC: "db-management-automatic",
         MANUAL: "db-management-manual"
     },
     IU_DESIGN_TYPE: {
         MODERN: "ui-design-type-modern",
         SIMPLE: "ui-design-type-simple"
+    },
+    PREFERRED_LANGUAGE: {
+        JAVA: "preflang-java",
+        CSHARP: "preflang-csharp",
+        PYTHON: "preflang-python",
+        JS: "preflang-js"
     }
 };
 
@@ -85,15 +91,15 @@ export const QUESTIONS = {
             }
         ]
     }, 
-    DB_MANAGEMENT: {
+    DATABASE_MANAGEMENT: {
         question: "¿Deseas que la gestión tu base de datos implique el menor uso de tecnologías?",
         alternatives: [
             {
-                id: ALTERNATIVES.DB_MANAGEMENT.AUTOMATIC,
+                id: ALTERNATIVES.DATABASE_MANAGEMENT.AUTOMATIC,
                 name: "Sí",
             },
             {
-                id: ALTERNATIVES.DB_MANAGEMENT.MANUAL,
+                id: ALTERNATIVES.DATABASE_MANAGEMENT.MANUAL,
                 name: "No"
             }
         ]
@@ -109,6 +115,27 @@ export const QUESTIONS = {
                 id: ALTERNATIVES.IU_DESIGN_TYPE.SIMPLE,
                 name: "Simple"
             }
+        ]
+    },
+    PREFERRED_LANGUAGE: {
+        question: "Elige un lenguaje el cual tengas preferencia",
+        alternatives: [
+            {
+                id: ALTERNATIVES.PREFERRED_LANGUAGE.CSHARP,
+                name: "CSharp",
+            },
+            {
+                id: ALTERNATIVES.PREFERRED_LANGUAGE.JAVA,
+                name: "Java",
+            },
+            {
+                id: ALTERNATIVES.PREFERRED_LANGUAGE.JS,
+                name: "JavaScript",
+            },
+            {
+                id: ALTERNATIVES.PREFERRED_LANGUAGE.PYTHON,
+                name: "Python",
+            },
         ]
     }
 };

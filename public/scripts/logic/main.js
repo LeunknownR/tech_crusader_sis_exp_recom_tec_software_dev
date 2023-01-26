@@ -1,22 +1,10 @@
-/**
- * @param {string[]} answers - Respuestas del usuario
- * @returns {string[]}
- */
-const getTechnologies = answers => {
-    return [];
-}
-/**
- * @param {string[]} technologies - Respuestas del usuario
- * @returns {string}
- */
-const interpretTechnologies = technologies => {
-    return "";
-}
+import getRecommendedTechnologies from "./getRecommendedTechnologies.js";
+
 /**
  * @param {string[]} answers - Respuestas del usuario
  * @returns {string}
  */
 export const getRecommendation = answers => {
-    const technologies = getTechnologies(answers);
-    return interpretTechnologies(technologies);
+    const recommendedTechnologies = getRecommendedTechnologies(answers);
+    return recommendedTechnologies;
 }

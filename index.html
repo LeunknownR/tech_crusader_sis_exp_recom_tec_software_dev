@@ -1,19 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Icon -->
-    <link rel="shortcut icon" href="public/img/jotaro-hat.png" type="image/x-icon">
-    <!-- Styles -->
-    <link rel="stylesheet" href="./public/styles/normalize.css">
-    <link rel="stylesheet" href="./public/styles/customize.css">
-    <link rel="stylesheet" href="./public/styles/index.css">
-    <title>TechCrusader</title>
-</head>
-<body>
-    <!-- Usa iconify no más -->
-    <img src="public/img/jotaro.png" alt="Jotaro"/>
-    <script type="module" src="./public/scripts/index.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Icon -->
+        <link
+            rel="shortcut icon"
+            href="public/img/jotaro-hat.png"
+            type="image/x-icon"
+        />
+        <!-- Styles -->
+        <link rel="stylesheet" href="./public/styles/normalize.css" />
+        <link rel="stylesheet" href="./public/styles/customize.css" />
+        <link rel="stylesheet" href="./public/styles/index.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>TechCrusader</title>
+    </head>
+    <body>
+        <header class="standard-padd">
+            <div id="logo-container">
+                <h1 class="custom-title">Tech</h1>
+                <iconify-icon
+                    id="logo-icon"
+                    icon="mdi:sword-cross"
+                ></iconify-icon>
+                <h1 class="custom-title">Crusader</h1>
+            </div>
+            <div id="team-icon">
+                <iconify-icon
+                    icon="fluent:people-team-32-filled"
+                ></iconify-icon>
+            </div>
+            <section id="members-list">
+                <h5 class="custom-subtitle-2">MIEMBROS</h5>
+                <article class="cards-container">
+                    <div class="member-card">
+                        <iconify-icon
+                            class="member-icon"
+                            icon="charm:person"
+                        ></iconify-icon>
+                        <span>Rivera Becerra Manuel Alejandro</span>
+                    </div>
+                    <div class="member-card">
+                        <iconify-icon
+                            class="member-icon"
+                            icon="charm:person"
+                        ></iconify-icon>
+                        <span>Infanzón Aguilar Diomedes Eustaquio</span>
+                    </div>
+                    <div class="member-card">
+                        <iconify-icon
+                            class="member-icon"
+                            icon="charm:person"
+                        ></iconify-icon>
+                        <span>Carrasco Stein Ralf Carsten</span>
+                    </div>
+                    <div class="member-card">
+                        <iconify-icon
+                            class="member-icon"
+                            icon="charm:person"
+                        ></iconify-icon>
+                        <span>Soto Ccaccachahua Juan Maycol</span>
+                    </div>
+                    <div class="member-card">
+                        <iconify-icon
+                            class="member-icon"
+                            icon="charm:person"
+                        ></iconify-icon>
+                        <span>Dulanto Arias Alexis Valentín</span>
+                    </div>
+                    <div class="member-card">
+                        <iconify-icon
+                            class="member-icon"
+                            icon="charm:person"
+                        ></iconify-icon>
+                        <span>Garibay Vargas Jorge Heymanol</span>
+                    </div>
+                </article>
+            </section>
+        </header>
+        <main>
+            <section id="questionary-wrapper" class="view active">
+                <section id="questionary">
+                    <div class="title">
+                        <h1>CUESTIONARIO</h1>
+                        <p>
+                            Responde las siguientes preguntas para darte una
+                            recomendación de tecnologías acorde a tus necesidades :).
+                        </p>
+                    </div>
+                    <form action="">
+                        <section class="content">
+                        </section>
+                        <footer>
+                            <button id="btn-process" class="custom-btn primary">
+                                <span>Procesar</span>
+                                <iconify-icon icon="fluent-mdl2:processing"></iconify-icon>
+                            </button>
+                            <button id="btn-clear" class="custom-btn secondary">
+                                <span>Limpiar</span>
+                                <iconify-icon icon="clarity:trash-solid"></iconify-icon>
+                            </button>
+                        </footer>
+                    </form>
+                </section>
+                <img id="jotaro-hat" src="./public/img/jotaro-hat.png" alt="Jotaro Hat" />
+            </section>
+            <section id="recommendation" class="view">
+                <article class="content">
+                    <div id="recommendation-header" class="title">
+                        <h1>RECOMENDACIONES</h1>
+                        <button id="btn-back-to-form" class="custom-btn">Volver</button>
+                    </div>
+                    <ul>
+                        <li>ReactJS</li>
+                        <li>ASP .net C#</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+        <footer id="footer-main" class="standard-padd">
+            <h3 class="custom-subtitle-1">COPYRIGHT © 2023</h3>
+            <h3 class="custom-subtitle-1">POWERED BY GROUP 2</h3>
+        </footer>
+        <div id="intro">
+            <img src="./public/img/intro.png"/>
+        </div>
+        <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+        <!-- <img src="public/img/jotaro.png" alt="Jotaro"/> -->
+        <script type="module" src="./public/scripts/index.js"></script>
+    </body>
 </html>
